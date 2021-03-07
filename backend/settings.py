@@ -82,12 +82,15 @@ WSGI_APPLICATION = "backend.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "OPTIONS": {
-            "read_default_file": BASE_DIR / "config.cnf",
-        },
+        "NAME": "ebdb",
+        "USER": "root",
+        "PASSWORD": "password",
+        "HOST": "ip-172-31-12-124.ap-southeast-1.compute.internal",
+        "PORT": "3306",
     }
 }
 
