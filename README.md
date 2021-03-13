@@ -55,6 +55,6 @@ and go to http://127.0.0.1:8000/admin/
 
 ### Update 'password'
 
-    curl -LX POST http://127.0.0.1:8000/auth/users/set_password/ -H 'Authorization: Token b704c9fc3655635646356ac2950269f352ea1139' --data-raw {'new_password':'aNzFdqBu','re_new_password':'aNzFdqBu','current_password':'aNzFdqBu'}
+    curl -LX POST http://127.0.0.1:8000/auth/users/set_password/ --data-raw {'new_password':'aNzFdqBu','username':'user1','password':'aNzFdqBu'}
 
 more detail: https://djoser.readthedocs.io/en/latest/index.html
