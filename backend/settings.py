@@ -25,7 +25,7 @@ SECRET_KEY = "5!p_2ho(w3o-o112l(15mw&z#gws7rwul#4&3mp47bfsu!j-ah"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -82,19 +82,17 @@ WSGI_APPLICATION = "backend.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'ebdb',
-        'USER': 'webserver',
-        'PASSWORD': '123456',
-        
-        'HOST': '20.198.233.33',
-        # 'HOST': '54.169.92.211',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "ebdb",
+        "USER": "root",
+        "PASSWORD": "password",
+        "HOST": "ip-172-31-12-124.ap-southeast-1.compute.internal",
+        "PORT": "3306",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
