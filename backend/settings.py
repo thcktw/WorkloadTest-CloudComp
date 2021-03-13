@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "5!p_2ho(w3o-o112l(15mw&z#gws7rwul#4&3mp47bfsu!j-ah"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -76,10 +76,22 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'ebdb',
+        'USER': 'webserver',
+        'PASSWORD': '123456',
+        
+        'HOST': '20.198.233.33',
+        # 'HOST': '54.169.92.211',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 

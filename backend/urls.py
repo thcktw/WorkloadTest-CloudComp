@@ -16,8 +16,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 
+# import custom
+from django.contrib.auth import get_user_model
+from rest_framework.routers import DefaultRouter
+
+# from backend.custom import UserViewSet
+
+# router = DefaultRouter()
+# router.register("test", UserViewSet)
+import backend.test_url
+import backend.custom
+# User = get_user_model()
+
+# urlpatterns = router.urls
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    re_path(r"^auth/", include("djoser.urls.base")),
-    re_path(r"^auth/", include("djoser.urls.authtoken")),
+    # re_path(r"^auth/", include("djoser.urls.base")),
+    re_path(r"^auth/token/login/?$", backend.custom.TokenCreateView.as_view(), name="login"),
+    # re_path(r"^auth/", include("djoser.urls.authtoken")),
+    re_path(r"^auth/", include(backend.custom_url)),
 ]
