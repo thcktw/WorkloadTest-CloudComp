@@ -24,7 +24,7 @@ from rest_framework.routers import DefaultRouter
 
 # router = DefaultRouter()
 # router.register("test", UserViewSet)
-import backend.test_url
+# import backend.test_url
 import backend.custom
 # User = get_user_model()
 
